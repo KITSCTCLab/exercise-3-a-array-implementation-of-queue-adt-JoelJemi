@@ -124,7 +124,7 @@ If the comparison fails, set is_palindrome as False.
 for i in range(length_of_text):
     if solution.pop_character()==solution.dequeue_character():
         is_palindrome=True
-    else:
+       else:
         is_palindrome=False
     
        
