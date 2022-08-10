@@ -10,6 +10,7 @@ class Solution:
       """
 
     # Write your code here
+    
     def __init__(self, size):
         """Inits Solution with stack, queue, size, top, front and rear.
         Arguments:
@@ -29,6 +30,8 @@ class Solution:
           True if it is empty, else returns False.
         """
         # Write your code here
+        return self.top==-1
+        
 
     def is_queue_empty(self):
         """
@@ -37,6 +40,9 @@ class Solution:
           True if it is empty, else returns False.
         """
         # Write your code here
+        return self.rear==-1
+        
+        
 
     def is_stack_full(self):
         """
@@ -45,6 +51,8 @@ class Solution:
           True if it is full, else returns False.
         """
         # Write your code here
+        return self.stack==self.size-1
+        
 
     def is_queue_full(self):
         """
@@ -53,6 +61,7 @@ class Solution:
           True if it is full, else returns False.
         """
         # Write your code here
+        return self.is_stack_full():
 
     def push_character(self, character):
         """
@@ -77,6 +86,8 @@ class Solution:
           The data that is popped out if the stack is not empty.
         """
         # Write your code here
+        self.top+=1
+        self.stack[self.top]=character
 
     def dequeue_character(self):
         """
@@ -85,6 +96,9 @@ class Solution:
           The data that is dequeued if the queue is not empty.
         """
         # Write your code here
+        self.rear+=1
+        if not self.is_queue_full():
+            self.queue[self.rear]=character
 
 
 # read the string text
@@ -108,6 +122,13 @@ compare both characters
 If the comparison fails, set is_palindrome as False.
 '''
 # Write the necessary logic
+for i in range(length_of_text):
+    if solution.pop_character()==solution.dequeue_character():
+        is_palindrome=True
+    else:
+        is_palindrome=False
+    
+       
 
 
 # finally print whether string text is palindrome or not.
