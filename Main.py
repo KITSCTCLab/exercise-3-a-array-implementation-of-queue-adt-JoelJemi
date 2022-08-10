@@ -60,7 +60,7 @@ class Solution:
           True if it is full, else returns False.
         """
         # Write your code here
-        return self.is_stack_full():
+        return self.is_stack_full()
 
     def push_character(self, character):
         """
